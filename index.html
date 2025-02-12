@@ -33,15 +33,13 @@
             gap: 15px;
             margin-top: 20px;
         }
+        .image-gallery figure {
+            text-align: center;
+        }
         .image-gallery img {
             width: 300px;
             border-radius: 8px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .image-gallery img:hover {
-            opacity: 0.7;
         }
         hr {
             margin: 20px 0;
@@ -54,33 +52,7 @@
             padding: 10px;
             border-radius: 5px;
         }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-        }
     </style>
-    <script>
-        function openModal(src) {
-            let modal = document.createElement("div");
-            modal.className = "modal";
-            modal.innerHTML = `<img src="${src}" onclick="this.parentElement.remove()">`;
-            document.body.appendChild(modal);
-            modal.style.display = "flex";
-        }
-    </script>
 </head>
 <body>
 
@@ -90,7 +62,8 @@
 
     <div class="container">
 
-        <h2>⚠️ Proposed Variance – How It Harms Our Homes</h2>
+        <h2>Proposed Variance – How It Harms Our Homes</h2>
+
         <p>
             A developer is seeking a variance to add a <b>third story</b> to an <b>already non-conforming building</b> located at  
             <b>172-174 Main Street (Block 89, Lot 6)</b>. This building is currently set back <b>less than 10 feet</b> from our property at  
@@ -102,55 +75,61 @@
         </p>
 
         <ul style="text-align: left;">
-            <li>📏 <b>Increase the building height by 12 feet</b>, casting even more <b>shadow</b> over our backyard and home.</li>
-            <li>👀 <b>Add more windows directly facing our yard</b>, further <b>reducing privacy</b> for us and our neighbors.</li>
-            <li>🏗️ <b>Set a dangerous precedent</b> for more oversized, out-of-scale developments in our community.</li>
+            <li><b>Increase the building height by 12 feet</b>, casting even more <b>shadow</b> over our backyard and home.</li>
+            <li>Add <b>more windows directly facing our yard</b>, further <b>reducing privacy</b> for us and our neighbors.</li>
+            <li>Set a <b>dangerous precedent</b> for more oversized, out-of-scale developments in our community.</li>
         </ul>
 
         <p>
-            🏡 <b>We urge the Planning Board to carefully consider the impact of this variance request</b> to protect our privacy, sunlight, and neighborhood character.
+            <b>We urge the Planning Board to reject this variance request</b> to protect our privacy, sunlight, and neighborhood character.
         </p>
 
         <hr>
 
-        <h2 id="action">📢 Stay Informed & Share Your Perspective</h2>
-        <p>The Planning Board will be reviewing this application on:</p>
-        <ul style="text-align: left; font-size: 18px;">
-            <li>📅 <b>Date:</b> <span style="color: red;">Wednesday, March 12, 2025</span></li>
-            <li>⏰ <b>Time:</b> 7:30 PM</li>
-            <li>📍 <b>Meeting Link:</b> <span style="color: gray;">(To Be Updated Soon)</span></li>
-        </ul>
-
-        <p>We encourage all residents to <b>attend and learn more</b> about this proposed variance. If you have concerns or questions, the meeting is an opportunity to share them with the board.</p>
-
-        <hr>
-
-        <h2>📸 Visualizing the Impact</h2>
+        <h2>Images of the Current Situation</h2>
 
         <h3>The Shadow Impact</h3>
         <div class="image-gallery">
-            <img src="https://i.imgur.com/e7ep0yN.jpg" alt="10 Edgehill Shadow 1" onclick="openModal(this.src)">
-            <img src="https://i.imgur.com/hvgpS6s.jpg" alt="10 Edgehill Shadow 2" onclick="openModal(this.src)">
+            <figure>
+                <img src="https://i.imgur.com/e7ep0yN.jpg" alt="10 Edgehill Shadow 1">
+                <figcaption>10 Edgehill Shadow 1</figcaption>
+            </figure>
+            <figure>
+                <img src="https://i.imgur.com/hvgpS6s.jpg" alt="10 Edgehill Shadow 2">
+                <figcaption>10 Edgehill Shadow 2</figcaption>
+            </figure>
         </div>
 
         <h3>The Privacy Concern</h3>
         <div class="image-gallery">
-            <img src="https://i.imgur.com/R7nUVUf.jpg" alt="Backyard Fence View 1" onclick="openModal(this.src)">
-            <img src="https://i.imgur.com/7QBYlkW.jpg" alt="Backyard Fence View 2" onclick="openModal(this.src)">
-            <img src="https://i.imgur.com/Lh6wKGC.jpg" alt="View from Proposed Building into Yard" onclick="openModal(this.src)">
-            <img src="https://i.imgur.com/fcD2Q05.jpg" alt="Additional Privacy Concern Image" onclick="openModal(this.src)">
+            <figure>
+                <img src="https://i.imgur.com/R7nUVUf.jpg" alt="Backyard Fence View 1">
+                <figcaption>Backyard Fence View 1</figcaption>
+            </figure>
+            <figure>
+                <img src="https://i.imgur.com/7QBYlkW.jpg" alt="Backyard Fence View 2">
+                <figcaption>Backyard Fence View 2</figcaption>
+            </figure>
         </div>
 
         <h3>The Setback and Scale Issue</h3>
         <div class="image-gallery">
-            <img src="https://i.imgur.com/QpiIiDJ.jpg" alt="10 Edgehill View from Road" onclick="openModal(this.src)">
-            <img src="https://i.imgur.com/pimq0pD.jpg" alt="10 Edgehill View from Kitchen" onclick="openModal(this.src)">
+            <figure>
+                <img src="https://i.imgur.com/QpiIiDJ.jpg" alt="10 Edgehill View from Road">
+                <figcaption>10 Edgehill View from Road</figcaption>
+            </figure>
+            <figure>
+                <img src="https://i.imgur.com/pimq0pD.jpg" alt="10 Edgehill View from Kitchen">
+                <figcaption>10 Edgehill View from Kitchen</figcaption>
+            </figure>
         </div>
 
         <hr>
 
-        <h2>📄 Documents & Reports</h2>
-        <p>All relevant documents, reports, and submissions can be accessed in the shared folder below:</p>
+        <h2>Documents & Reports</h2>
+        <p>
+            All relevant documents, reports, and submissions can be accessed in the shared folder below:
+        </p>
         <p>
             <a href="https://www.dropbox.com/scl/fo/ov13x3l2c5hqhqymqb2mw/AL9Ftox46_bSoxBddMNycwo?rlkey=vssshghlo0aayp4jvs93r2r0e&e=2&st=rl31d03k&dl=0" 
                target="_blank" 
@@ -161,7 +140,7 @@
 
         <hr>
 
-        <p>For more details, contact us at <a href="mailto:info@impactonedgehill.com">info@impactonedgehill.com</a>.</p>
+        <p>For more details, contact us at <a href="mailto:abartonmd@gmail.com">abartonmd@gmail.com</a> or <a href="mailto:jonnyoctober@gmail.com">jonnyoctober@gmail.com</a>.</p>
 
     </div>
 
